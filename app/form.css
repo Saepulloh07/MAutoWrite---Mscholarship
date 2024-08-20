@@ -1,0 +1,100 @@
+/* Global Styles */
+body {
+    background-color: #1a1a2e; /* Dark background */
+    color: #eaeaea; /* Light text */
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    color: #ffffff;
+    text-shadow: 0 0 8px #ff007f, 0 0 8px #00c3ff; /* Glow effect on heading */
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 4px #ff007f, 0 0 4px #00c3ff; /* Subtle glow effect */
+}
+
+/* Form Input Styles */
+input.form-control {
+    background-color: #2d2d44; /* Dark input background */
+    color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input.form-control:focus {
+    border: 2px solid #ff007f; /* Pink border on focus */
+    outline: none;
+    box-shadow: 0 0 10px #ff007f, 0 0 10px #00c3ff;
+}
+
+/* Button Styles */
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ff007f;
+    color: #fff;
+    box-shadow: 0 0 8px #ff007f;
+}
+
+.btn-primary:hover {
+    background-color: #ff4d94;
+    box-shadow: 0 0 15px #ff007f, 0 0 15px #00c3ff;
+}
+
+.btn-success {
+    background-color: #00c3ff;
+    color: #fff;
+    box-shadow: 0 0 8px #00c3ff;
+}
+
+.btn-success:hover {
+    background-color: #33d0ff;
+    box-shadow: 0 0 15px #00c3ff, 0 0 15px #ff007f;
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: #2d2d44;
+    color: #eaeaea;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+}
+
+.modal-header, .modal-footer {
+    border-bottom: none;
+    border-top: none;
+}
+
+.modal-title {
+    color: #ffffff;
+    text-shadow: 0 0 6px #ff007f, 0 0 6px #00c3ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    input.form-control {
+        font-size: 0.9em;
+    }
+    
+    button {
+        padding: 8px 15px;
+    }
+}

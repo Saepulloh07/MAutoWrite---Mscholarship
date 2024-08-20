@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mscholarship - AppReport</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="icon" href="images/logo-mfoundation.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Laporan Aktivitas Bulanan</h2>
+        <form id="activityForm">
+            <!-- Nama dan Periode -->
+            <div class="section">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" class="form-control" required>
+            </div>
+            <div class="section">
+                <label for="periode">Periode (Bulan & Tahun):</label>
+                <p><small><em>contoh : Juli 2024</em></small></p>
+                <input type="text" id="periode" class="form-control" required>
+            </div>
+
+            <!-- Kegiatan dan Organisasi/Prestasi -->
+            <div class="section">
+                <label for="kegiatan">Nama Kegiatan:</label>
+                <input type="text" id="kegiatan" class="form-control" required>
+            </div>
+            <div class="section">
+                <label for="organisasi">Organisasi/Prestasi:</label>
+                <p><small><em>Pilih Organisasi atau Prestasi!</em></small></p>
+                <input type="text" id="organisasi" class="form-control" required>
+            </div>
+
+            <!-- Pihak yang Terlibat -->
+            <div class="section">
+                <label for="pihak">Pihak yang Terlibat:</label>
+                <input type="text" id="pihak" class="form-control" required>
+            </div>
+
+            <!-- Tanggal Kegiatan -->
+            <div class="section">
+                <label for="tanggalAwal">Tanggal Mulai Kegiatan:</label>
+                <input type="datetime-local" id="tanggalAwal" class="form-control" required>
+            </div>
+            <div class="section">
+                <label for="tanggalAkhir">Tanggal Akhir Kegiatan:</label>
+                <input type="datetime-local" id="tanggalAkhir" class="form-control" required>
+            </div>
+
+            <!-- Tempat Kegiatan -->
+            <div class="section">
+                <label for="tempat">Tempat Kegiatan:</label>
+                <input type="text" id="tempat" class="form-control" required>
+            </div>
+
+            <!-- Tujuan Kegiatan -->
+            <div class="section">
+                <label for="tujuan">Tujuan Kegiatan:</label>
+                <input type="text" id="tujuan" class="form-control" required>
+            </div>
+
+            <!-- Pelaksanaan dan Hasil -->
+            <div class="section">
+                <label for="pelaksanaan">Pelaksanaan:</label>
+                <input type="text" id="pelaksanaan" class="form-control" required>
+            </div>
+            <div class="section">
+                <label for="hasil">Hasil yang Dicapai:</label>
+                <input type="text" id="hasil" class="form-control" required>
+            </div>
+
+            <!-- Dokumentasi -->
+            <div class="section">
+                <label for="foto">Link Foto Kegiatan (Google Drive):</label>
+                <p><small><em>Pastikan link public dan dapat diakses, maks. 5 foto</em></small></p>
+                <input type="url" id="foto" class="form-control" required>
+            </div>
+
+            <!-- Buttons -->
+            <button type="button" class="btn btn-primary" onclick="previewReport()">Preview Report</button>
+            <button type="button" class="btn btn-success" onclick="downloadReport()">Download PDF</button>
+        </form>
+    </div>
+
+        <!-- Modal for Preview -->
+    <div class="modal fade" id="previewModal" tabindex="-1" role="dialog" aria-labelledby="previewModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="previewModalLabel">Preview Report</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <canvas id="previewCanvas"></canvas>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="downloadReport()">Download PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
